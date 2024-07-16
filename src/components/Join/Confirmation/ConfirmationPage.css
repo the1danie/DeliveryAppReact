@@ -1,0 +1,54 @@
+.infohome-container-order {
+    flex-direction: column !important; /* Выровнять элементы по вертикали */
+    display: flex;
+    justify-content: center; /* Центрирует по вертикали */
+}
+
+
+.infohome-container {
+    display: flex;
+    flex-direction: column; /* Выровнять элементы по вертикали */
+    justify-content: center; /* Центрирует по вертикали */
+    align-items: center; /* Центрирует по горизонтали */
+    gap: 15px;
+    height: 80vh; /* Занимает всю высоту экрана */
+    text-align: center; /* Центрировать текст */
+}
+
+.infohome-order {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.confirmation-page {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-align: left;
+}
+
+.confirmation-page-return {
+    display: flex;
+    align-items: baseline;
+    gap: 10px; /* Space between the icon and the text */
+}
+
+.confirmation-page-text {
+    font-size: 16px;
+}
+
+.icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid #F6F8F9; /* Adjusted to use 'solid' and specify width */
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.icon-button:hover {
+    background-color: #e0e0e0; /* Adjust the hover background color as needed */
+}

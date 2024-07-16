@@ -1,0 +1,76 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px; /* Increased padding */
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    width: 120%; /* */
+    max-width: 400px;
+    margin: auto;
+    background-color: #fff;
+
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #888888;
+    margin-bottom: 5px;
+    text-align: left; /* Align text to the left */
+
+}
+
+.form-group input {
+    font-size: 20px;
+    padding: 10px;
+    border: none; /* Remove default border */
+    border-bottom: 1px solid #e0e0e0; /* Add bottom border */
+    outline: none; /* Remove outline on focus */
+    width: 100%; /* Ensure input fields take full width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    text-align: left; /* Ensure text is aligned to the left */
+
+}
+
+.form-buttons {
+    gap: 55px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.delete-button, .block-button {
+    border: none;
+    padding: 10px 32px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.delete-button {
+    margin-left: 16px;
+    background-color: #ffe6e6;
+    color: #ff5c5c;
+}
+
+.block-button {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.delete-button:hover {
+    background-color: #ffcccc;
+}
+
+.block-button:hover {
+    background-color: #555555;
+}
+
+.form-group input.no-border {
+    border-bottom: none; /* Remove bottom border for specific inputs */
+}

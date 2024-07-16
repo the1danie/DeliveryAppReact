@@ -1,0 +1,13 @@
+.td-role {
+    color: #B0BABF !important;
+    font-size: 12px;
+    padding-left: 50px !important;
+    white-space: nowrap; /* Prevent text wrapping */
+
+}
+
+.td-role-information {
+    padding-left: 50px !important;
+    white-space: nowrap; /* Prevent text wrapping */
+
+}

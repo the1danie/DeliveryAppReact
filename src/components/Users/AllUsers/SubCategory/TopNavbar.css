@@ -1,0 +1,79 @@
+/* Header.css */
+.header {
+    width: 100%; /* Full width */
+    padding: 20px 20px; /* Padding for spacing */
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); /* Optional shadow for styling */
+}
+
+button {
+    border: none; /* Remove default border */
+    background: none; /* Remove default background */
+    padding: 0; /* Remove default padding */
+    cursor: pointer; /* Ensure cursor behaves like a link */
+}
+
+
+.search-bar {
+    color: #333; /* Text color */
+    margin-right: 45%;
+    flex: 1;
+    text-align: center;
+}
+
+.header-nav {
+    display: flex; /* Flexbox for layout */
+}
+
+.header-link {
+    color: #333; /* Link text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Font size */
+    margin-right: 40px;
+}
+
+.header-link:hover {
+    color: #000; /* Text color on hover *
+    text-decoration: underline; /* Underline on hover */
+}
+
+.search-icon {
+    color: #939393;
+    transition: color 0.2s ease-out; /* Плавное изменение цвета иконки */
+    margin-right: 10px;
+}
+
+.search-input {
+    font-size: 18px;
+    border: none !important;
+    outline: none;
+    flex: 1;
+}
+
+.search-input::placeholder {
+    font-size: 16px;
+}
+
+.search-bar.focused {
+    border-color: #000; /* Цвет линии при фокусе */
+}
+
+.search-icon.focused {
+    color: #000; /* Цвет иконки при фокусе */
+}
+
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    font-size: 16px; /* Установите желаемый размер шрифта */
+    /* Другие свойства placeholder, если необходимо */
+}
+
+.top-navbar-button {
+    transition: transform 0.1s ease;
+}
+.top-navbar-button:active {
+    transform: scale(0.95);
+}

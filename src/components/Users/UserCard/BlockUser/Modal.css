@@ -1,0 +1,109 @@
+.modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent gray background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 37px;
+    border-radius: 8px;
+    text-align: left;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px; /* Adjust height as needed */
+}
+
+.modal-content h2 {
+    margin: 20px 0;
+}
+
+.modal-content p {
+    flex-grow: 1;
+    margin: 20px 0;
+}
+
+.modal-content .block {
+    align-self: center;
+    padding: 10px 230px;
+    background-color: #343434; /* button color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal-content .remove-ambassador-second {
+    padding: 10px 200px;
+    align-self: center;
+    background-color: #343434; /* button color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal-content .block:hover {
+    background-color: #232323; /* darker button on hover */
+}
+
+.bordered-box {
+    font-size: 21px;
+
+    border: 1px solid #ddd; /* Light gray border */
+    margin: 7px 0; /* Space around the box */
+    border-radius: 8px; /* Rounded corners */
+    text-align: left; /* Align text to the left */
+}
+
+
+.bordered-box span {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.bordered-box textarea {
+    width: 100%;
+    height: 100px; /* Adjust height as needed */
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+.bordered-box textarea::placeholder {
+    color: black; /* Placeholder text color */
+    font-size: 21px;
+
+}
+
+.bordered-box span {
+    font-weight: 400;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+}

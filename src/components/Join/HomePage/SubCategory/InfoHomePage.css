@@ -1,0 +1,94 @@
+.infohome-container-order {
+    flex-direction: row !important; /* Выровнять элементы по вертикали */
+    display: flex;
+    justify-content: center; /* Центрирует по вертикали */
+    gap: 15px;
+}
+
+
+.infohome-container {
+    display: flex;
+    flex-direction: column; /* Выровнять элементы по вертикали */
+    justify-content: center; /* Центрирует по вертикали */
+    align-items: center; /* Центрирует по горизонтали */
+    gap: 15px;
+    height: 80vh; /* Занимает всю высоту экрана */
+    text-align: center; /* Центрировать текст */
+}
+
+.infohome-order {
+    font-size: 28px;
+    font-weight: 500;
+}
+.infohome-authentication {
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: flex-start; /* Align items to the start (top) */
+    gap: 10px; /* Adds spacing between child elements */
+    width: 350px; /* Limits the width of the form */
+}
+
+
+.infohome-authentication-text {
+    margin-bottom: 10px;
+    text-align: left; /* Align text to the left */
+
+}
+
+form {
+    display: flex;
+    flex-direction: column; /* Расположить элементы формы вертикально */
+    gap: 10px; /* Добавить отступы между элементами формы */
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px;
+    text-align: left; /* Aligns text to the left */
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    font-size: 14px; /* размер placeholder */
+    color: #999; /* цвет серого текста placeholder */
+    left: 10px; /* отступ слева для placeholder */
+}
+
+
+.submit {
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 30px;
+    width: 84%;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: #555;
+}
+
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-container input {
+    flex: 1;
+    padding-right: 40px; /* Space for the icon */
+}
+
+.password-icon {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: #ccc; /* Optional: style the icon color */
+}

@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    justify-content: flex-start; /* Center items horizontally */
+    align-items: flex-start; /* Align items at the top */
+    padding: 20px; /* Add padding for spacing */
+}
+
+.content {
+    display: flex;
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Center items vertically */
+    width: 100%; /* Take full width */
+    max-width: 1250px; /* Optional: set max width */
+    margin: 0 auto; /* Center content horizontally */
+}
+
+button {
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+button:active {
+    transform: scale(0.95);
+}

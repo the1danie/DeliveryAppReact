@@ -1,0 +1,124 @@
+/* Переменные для цветов и размеров */
+:root {
+    --square-size: 300px; /* Размер квадратного контейнера */
+    --square-size-ambassador: 400px; /* Размер контейнера для амбассадора */
+    --height-ambassador: 300px; /* Высота контейнера для амбассадора */
+    --border-radius: 20px; /* Радиус границы */
+    --border-color: #ccc; /* Цвет границы */
+    --button-bg-color: #343434; /* Цвет фона кнопки */
+    --button-bg-color-second: #007bff; /* Цвет фона кнопки для второго состояния */
+}
+
+.centered-container {
+    display: flex;
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+    margin-top: 7%;
+}
+
+.photo-info-square {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем элементы по оси X */
+    justify-content: space-between; /* Равномерно распределяем элементы по оси Y */
+    width: var(--square-size);
+    height: var(--square-size);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    padding: 20px;
+}
+
+.photo-info-square.ambassador {
+    width: var(--square-size-ambassador);
+    height: var(--height-ambassador);
+}
+
+.photo-wrapper {
+    flex: 1; /* Занимает доступное пространство внутри контейнера */
+}
+
+.photo {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    margin-left: 10%;
+    margin-top: 10px;
+}
+
+.info {
+    text-align: center; /* Выравнивание текста по центру */
+    margin-top: 10px; /* Верхний отступ для информации */
+}
+
+.button-wrapper {
+    margin-bottom: 15px;
+}
+
+.button {
+    padding: 10px 18px;
+    border-radius: 5px;
+    background-color: var(--button-bg-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+    white-space: nowrap; /* Prevent text wrapping */
+    display: flex;
+    align-items: center; /* Центрируем текст по вертикали */
+    justify-content: center; /* Центрируем текст по горизонтали */
+    transform: scale(1); /* Добавляем начальное значение scale */
+}
+
+.button p {
+    margin: 0;
+}
+
+.ambassador-second {
+    padding: 10px 18px;
+}
+
+.remove-ambassador {
+    padding: 10px 70px;
+}
+
+button:active {
+    transform: scale(1.2);
+}
+
+.box-information {
+    font-size: 21px;
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    text-align: left; /* Align text to the left */
+    width: 100%; /* Занимает всю доступную ширину */
+    max-width: 350px; /* Максимальная ширина контейнера, чтобы не был слишком широким на больших экранах */
+    margin-bottom: 10px;
+}
+
+.box-information span {
+    display: block;
+    padding-left: 2px;
+    font-size: 13px;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.box-information textarea {
+    width: calc(100% - 20px); /* Вычитаем внутренний отступ, чтобы сохранить правильную ширину */
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 18px; /* Размер шрифта для textarea */
+    padding-left: 12px;
+}
+
+.box-information textarea::placeholder {
+    color: black; /* Цвет placeholder текста */
+}
+
+.box-information span {
+    font-weight: 400; /* Обычный вес шрифта для span */
+    margin-left: 10px; /* Отступ слева для span */
+    margin-bottom: 0; /* Убираем нижний отступ для span */
+}

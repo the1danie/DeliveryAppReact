@@ -1,0 +1,47 @@
+.users_platform {
+    display: flex;
+    align-items: flex-start; /* Align items at the top */
+    justify-content: flex-start;
+
+}
+
+.users {
+    display: flex;
+    flex-direction: row; /* Arrange items in a row */
+    margin-left: 17%; /* Adjust margin as needed */
+}
+
+.users p {
+    position: relative; /* Ensure positioning context for pseudo-element */
+    padding: 10px 20px; /* Add padding for spacing around text */
+    font-size: 16px; /* Set font size */
+    color: #333; /* Text color */
+    cursor: pointer; /* Set cursor style */
+    transition: color 0.2s ease; /* Smooth transition for color */
+    z-index: 0; /* Ensure text is above the underline */
+
+}
+
+.users p::before {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Position the underline at the bottom */
+    left: 0;
+    width: 0%;
+    height: 2px; /* Height of the underline */
+    background-color: #000; /* Color of the underline */
+    transition: width 0.3s ease; /* Transition for the underline width */
+    z-index: -1; /* Ensure the underline is behind the text */
+}
+
+.users p.active {
+    color: #000; /* Text color when active */
+}
+
+.users p.active::before {
+    width: 100%; /* Expand the underline to full width when active */
+}
+
+.users p:hover {
+    color: #000; /* Text color on hover */
+}

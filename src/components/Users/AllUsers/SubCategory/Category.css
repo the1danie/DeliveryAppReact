@@ -1,0 +1,102 @@
+.container-category {
+    display: flex;
+    justify-content: flex-start; /* Center items horizontally */
+    align-items: flex-start; /* Align items at the top */
+    margin-left: 15%;
+    padding: 20px; /* Add padding for spacing */
+}
+
+.content-category {
+    display: flex;
+    justify-content: space-between; /* Space items evenly */
+    width: 100%; /* Take full width */
+
+    max-width: 900px; /* Optional: set max width */
+}
+
+.container-category p {
+    color: #B0BABF;
+    font-size: 14px;
+}
+
+table {
+    width: 100%;
+
+
+}
+
+.nameAndSurname {
+    padding-left: 90px !important;
+    color: #B0BABF !important;
+    font-size: 12px;
+}
+
+.td-size {
+    color: #B0BABF !important;
+    font-size: 12px;
+}
+
+.td-status {
+    padding-right: 60px !important;
+}
+
+
+/* Custom CSS class for a light green circle with green text */
+/* Custom CSS class for a light green rectangular background with green text */
+.rect-green {
+    margin-top: 5px;
+    background-color: #d4edda; /* Светло-зелёный фон */
+    color: #28a745; /* Зелёный текст */
+    padding: 2px 10px; /* Уменьшенные внутренние отступы */
+    border-radius: 5px; /* Закруглённые углы */
+    text-align: center;
+    display: inline-block; /* Установлено inline-block для уменьшенного фона */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+.rect-orange {
+    margin-top: 5px;
+    white-space: nowrap; /* Prevent text wrapping */
+    background-color: rgba(239, 127, 49, 0.1); /* Светло-зелёный фон */
+    color: #ef7f31; /* Зелёный текст */
+    padding: 2px 10px; /* Уменьшенные внутренние отступы */
+    border-radius: 5px; /* Закруглённые углы */
+    text-align: center;
+    display: inline-block; /*   Установлено inline-block для уменьшенного фона */
+}
+
+.rect-grey {
+    margin-top: 5px;
+    white-space: nowrap; /* Prevent text wrapping */
+    background-color: rgb(246, 248, 249); /* Светло-зелёный фон */
+    color: #889297; /* Зелёный текст */
+    padding: 2px 10px; /* Уменьшенные внутренние отступы */
+    border-radius: 5px; /* Закруглённые углы */
+    text-align: center;
+    display: inline-block; /* Установлено inline-block для уменьшенного фона */
+}
+
+.img-container {
+    display: flex;
+    align-items: center;
+}
+
+.img-container img {
+    max-width: 50px; /* Maximum width for the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: Rounded corners for the image */
+    margin-right: 10px; /* Space between the image and the text */
+}
+
+.img-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.img-text span {
+    color: #333333;
+}
+
+.data, .ambassador, .gmail-table, .pen-table {
+    padding-top: 15px   !important;
+}
