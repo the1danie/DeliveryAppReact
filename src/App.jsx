@@ -13,7 +13,7 @@ function App() {
     return (
         <Router>
             <Routes>
-                <Route exact path="/join" element={<HomePage />} />
+                <Route exact path="/" element={<HomePage />} />
                 <Route path="/join/confirmation" element={<ConfirmationPage />} />
                 <Route path="/join/generatepswd" element={<GeneratePassword />} />
                 <Route path="/users" element={<AllUsers />} />
