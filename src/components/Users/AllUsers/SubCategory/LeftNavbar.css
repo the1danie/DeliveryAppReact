@@ -1,43 +1,43 @@
 /* Navbar.css */
 
 .navbar {
-  display: flex;
-  align-content: center;
-  justify-content: flex-start;
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 260px;
-  background-color: #f6f8f9;
-  padding-top: 20px;
-  align-items: flex-start;
-  z-index: 1;
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 260px;
+    background-color: #f6f8f9;
+    padding-top: 20px;
+    align-items: flex-start;
+    z-index: 1;
 }
 
 .navbar .nav-item {
-  width: 100%;
-  transition:
-    background-color 0.3s,
-    color 0.3s; /* Transition for background-color and color */
+    width: 100%;
+    transition:
+            background-color 0.3s,
+            color 0.3s; /* Transition for background-color and color */
 }
 
 .nav-icon {
-  width: 35px;
-  text-align: center;
-  margin-right: 10px;
-  color: #b0babf;
-  transition: color 0.3s; /* Transition for icon color */
+    width: 35px;
+    text-align: center;
+    margin-right: 10px;
+    color: #b0babf;
+    transition: color 0.3s; /* Transition for icon color */
 }
 
 .navbar .nav-link {
-  padding: 10px 20px;
-  text-align: left;
-  white-space: nowrap;
-  color: #333;
-  transition:
-    background-color 0.3s,
-    color 0.3s; /* Transition for background-color and color */
+    padding: 10px 20px;
+    text-align: left;
+    white-space: nowrap;
+    color: #333;
+    transition:
+            background-color 0.3s,
+            color 0.3s; /* Transition for background-color and color */
 }
 
 .navbar .nav-link.nav-link-active,
@@ -46,18 +46,18 @@
 .navbar .nav-link:focus .nav-icon,
 .navbar .nav-link.nav-link-active span,
 .navbar .nav-link:focus span {
-  background-color: #fff; /* Background color on focus and active */
-  color: #000; /* Text color on focus and active */
+    background-color: #fff; /* Background color on focus and active */
+    color: #000; /* Text color on focus and active */
 }
 
 span {
-  color: #b0babf;
+    color: #b0babf;
 }
 
 .align-items-center {
-  align-items: center;
+    align-items: center;
 }
 
 .align-self-start {
-  align-self: flex-start;
+    align-self: flex-start;
 }

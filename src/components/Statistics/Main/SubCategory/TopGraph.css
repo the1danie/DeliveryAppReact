@@ -1,14 +1,21 @@
-.top-graph-container {
-  width: 80%;
-  margin: 20px auto;
-  padding: 20px;
+button {
+  background-color: white;
   border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 8px 12px;
+  margin-right: 5px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.top-graph-container h2 {
-  text-align: center;
-  margin-bottom: 20px;
+button:hover {
+  background-color: #f0f0f0;
+}
+
+button:focus {
+  outline: none;
+  background-color: #e0e0e0;
+}
+
+button:active {
+  background-color: #d0d0d0;
 }
