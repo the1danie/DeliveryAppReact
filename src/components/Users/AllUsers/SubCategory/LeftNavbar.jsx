@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Nav } from "react-bootstrap";
 import "./LeftNavbar.css";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUserCircle,
