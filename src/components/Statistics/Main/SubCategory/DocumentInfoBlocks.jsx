@@ -1,61 +1,23 @@
 import React from "react";
 import PurpleCircle from "../../../../assets/PurpleCircle.svg";
 import GreenCircle from "../../../../assets/GreenCircle.svg";
+import "./DocumentInfoBlocks.css"; // Import the CSS file
 
 const DocumentInfoBlocks = ({ totalUsers, totalPaidSubscriptions }) => {
   return (
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(2, 1fr)", // Create two equal columns
-        marginTop: "10px",
-        gap: "20px", // Space between the blocks
-        width: "50.4%", // Container width
-        marginLeft: "17.4%", // Container alignment
-      }}
-    >
-      <div
-        style={{
-          textAlign: "left",
-          padding: "20px", // Adjust padding as needed
-          borderRadius: "10px",
-          border: "1px solid #ddd",
-          display: "flex", // Corrected the display property
-          alignItems: "baseline", // Center items vertically
-        }}
-      >
-        <img
-          src={PurpleCircle}
-          alt="Purple Circle"
-          style={{
-            marginRight: "10px", // Space between the circle and text
-          }}
-        />
+    <div className="document-info-container">
+      <div className="document-info-block">
+        <img src={PurpleCircle} alt="Purple Circle" />
         <div>
-          <p style={{ margin: 0 }}>Общее количество загруженных файлов</p>
-          <h3 style={{ margin: 0 }}>{totalUsers}</h3>
+          <p>Общее количество загруженных файлов</p>
+          <h3>{totalUsers}</h3>
         </div>
       </div>
-      <div
-        style={{
-          textAlign: "left",
-          padding: "20px", // Adjust padding as needed
-          borderRadius: "10px",
-          border: "1px solid #ddd",
-          display: "flex", // Corrected the display property
-          alignItems: "baseline", // Center items vertically
-        }}
-      >
-        <img
-          src={GreenCircle}
-          alt="Green Circle"
-          style={{
-            marginRight: "10px", // Space between the circle and text
-          }}
-        />
+      <div className="document-info-block">
+        <img src={GreenCircle} alt="Green Circle" />
         <div>
-          <p style={{ margin: 0 }}>Общее количество скачанных файлов</p>
-          <h3 style={{ margin: 0 }}>{totalPaidSubscriptions}</h3>
+          <p>Общее количество скачанных файлов</p>
+          <h3>{totalPaidSubscriptions}</h3>
         </div>
       </div>
     </div>

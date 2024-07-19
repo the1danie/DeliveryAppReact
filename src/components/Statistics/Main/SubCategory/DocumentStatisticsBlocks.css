@@ -1,21 +1,14 @@
-button {
-  background-color: white;
-  border: 1px solid #ddd;
-  padding: 8px 12px;
+/* styles.css or your stylesheet */
+.button-default {
+  padding: 5px 10px;
   margin-right: 5px;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  cursor: pointer;
+  background-color: white;
+  transition: border 0.3s, background-color 0.3s; /* Smooth transition for border and background color */
 }
 
-button:hover {
+.button-active {
+  border: 2px solid blue;
   background-color: #f0f0f0;
-}
-
-button:focus {
-  outline: none;
-  background-color: #e0e0e0;
-}
-
-button:active {
-  background-color: #d0d0d0;
 }

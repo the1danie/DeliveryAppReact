@@ -1,0 +1,26 @@
+.document-info-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Create two equal columns */
+  margin-top: 10px;
+  gap: 20px; /* Space between the blocks */
+  width: 50.4%; /* Container width */
+  margin-left: 17.4%; /* Container alignment */
+}
+
+.document-info-block {
+  text-align: left;
+  padding: 20px; /* Adjust padding as needed */
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  display: flex; /* Corrected the display property */
+  align-items: baseline; /* Center items vertically */
+}
+
+.document-info-block img {
+  margin-right: 10px; /* Space between the circle and text */
+}
+
+.document-info-block p,
+.document-info-block h3 {
+  margin: 0;
+}

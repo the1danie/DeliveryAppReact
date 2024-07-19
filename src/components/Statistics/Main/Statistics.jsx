@@ -8,6 +8,7 @@ import TopGraph from "./SubCategory/TopGraph.jsx";
 import StatisticsBlocks from "./SubCategory/StatisticsBlocks.jsx";
 import DocumentStatisticsBlocks from "./SubCategory/DocumentStatisticsBlocks.jsx";
 import DocumentInfoBlocks from "./SubCategory/DocumentInfoBlocks.jsx";
+import SavedInformation from "./SubCategory/SavedInfromation.jsx";
 
 const Statistics = () => {
   const [filter, setFilter] = useState("Пользователь"); // State for filtering
@@ -38,6 +39,11 @@ const Statistics = () => {
             totalUsers={"2000"}
             totalPaidSubscriptions={"3000"}
           />
+        </>
+      )}
+      {filter === "Хранилище" && (
+        <>
+          <SavedInformation />
         </>
       )}
     </div>

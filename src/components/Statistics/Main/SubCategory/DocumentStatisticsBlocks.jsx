@@ -136,29 +136,20 @@ const DocumentStatisticsBlocks = () => {
         >
           <button
             onClick={() => setTimeRange("12 months")}
-            style={{
-              padding: "5px 10px",
-              marginRight: "5px",
-              border:
-                timeRange === "12 months" ? "2px solid blue" : "1px solid #ccc",
-              borderRadius: "5px",
-              backgroundColor: timeRange === "12 months" ? "#f0f0f0" : "white",
-            }}
+            className={`button-default ${
+              timeRange === "12 months" ? "button-active" : ""
+            }`}
           >
-            12 месяцев
+            12 months
           </button>
+
           <button
             onClick={() => setTimeRange("6 months")}
-            style={{
-              padding: "5px 10px",
-              marginRight: "5px",
-              border:
-                timeRange === "6 months" ? "2px solid blue" : "1px solid #ccc",
-              borderRadius: "5px",
-              backgroundColor: timeRange === "6 months" ? "#f0f0f0" : "white",
-            }}
+            className={`button-default ${
+              timeRange === "6 months" ? "button-active" : ""
+            }`}
           >
-            6 месяцев
+            6 months
           </button>
           <button
             onClick={() => setTimeRange("30 days")}
