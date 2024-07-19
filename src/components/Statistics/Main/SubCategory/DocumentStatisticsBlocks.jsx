@@ -152,34 +152,24 @@ const DocumentStatisticsBlocks = () => {
             6 months
           </button>
           <button
-            onClick={() => setTimeRange("30 days")}
-            style={{
-              padding: "5px 10px",
-              marginRight: "5px",
-              border:
-                timeRange === "30 days" ? "2px solid blue" : "1px solid #ccc",
-              borderRadius: "5px",
-              backgroundColor: timeRange === "30 days" ? "#f0f0f0" : "white",
-            }}
+              onClick={() => setTimeRange("30 days")}
+              className={`button-default ${
+                  timeRange === "30 days" ? "button-active" : ""
+              }`}
           >
-            30 дней
+            30 days
           </button>
           <button
-            onClick={() => setTimeRange("7 days")}
-            style={{
-              padding: "5px 10px",
-              marginRight: "5px",
-              border:
-                timeRange === "7 days" ? "2px solid blue" : "1px solid #ccc",
-              borderRadius: "5px",
-              backgroundColor: timeRange === "7 days" ? "#f0f0f0" : "white",
-            }}
+              onClick={() => setTimeRange("7 days")}
+              className={`button-default ${
+                  timeRange === "7 days" ? "button-active" : ""
+              }`}
           >
-            7 дней
+            7 days
           </button>
         </div>
-        <div style={{ height: "300px" }}>
-          <MyResponsiveLine data={getData()} />
+        <div style={{height: "300px"}}>
+          <MyResponsiveLine data={getData()}/>
         </div>
       </div>
     </div>

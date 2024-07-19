@@ -126,70 +126,51 @@ const App = () => {
         >
           Пользователи
         </h2>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "flex-end",
-            marginBottom: "10px",
-            gap: "25px",
-          }}
-        >
-          <button
-            onClick={() => setTimeRange("12 months")}
-            style={{
-              padding: "5px 10px",
-              marginRight: "5px",
-              border:
-                timeRange === "12 months" ? "2px solid blue" : "1px solid #ccc",
-              borderRadius: "5px",
-              backgroundColor: timeRange === "12 months" ? "#f0f0f0" : "white",
-            }}
+          <div
+              style={{
+                  display: "flex",
+                  justifyContent: "flex-end",
+                  marginBottom: "10px",
+                  gap: "25px",
+              }}
           >
-            12 месяцев
-          </button>
-          <button
-            onClick={() => setTimeRange("6 months")}
-            style={{
-              padding: "5px 10px",
-              marginRight: "5px",
-              border:
-                timeRange === "6 months" ? "2px solid blue" : "1px solid #ccc",
-              borderRadius: "5px",
-              backgroundColor: timeRange === "6 months" ? "#f0f0f0" : "white",
-            }}
-          >
-            6 месяцев
-          </button>
-          <button
-            onClick={() => setTimeRange("30 days")}
-            style={{
-              padding: "5px 10px",
-              marginRight: "5px",
-              border:
-                timeRange === "30 days" ? "2px solid blue" : "1px solid #ccc",
-              borderRadius: "5px",
-              backgroundColor: timeRange === "30 days" ? "#f0f0f0" : "white",
-            }}
-          >
-            30 дней
-          </button>
-          <button
-            onClick={() => setTimeRange("7 days")}
-            style={{
-              padding: "5px 10px",
-              marginRight: "5px",
-              border:
-                timeRange === "7 days" ? "2px solid blue" : "1px solid #ccc",
-              borderRadius: "5px",
-              backgroundColor: timeRange === "7 days" ? "#f0f0f0" : "white",
-            }}
-          >
-            7 дней
-          </button>
-        </div>
-        <div style={{ height: "300px" }}>
-          <MyResponsiveLine data={getData()} />
-        </div>
+              <button
+                  onClick={() => setTimeRange("12 months")}
+                  className={`button-default ${
+                      timeRange === "12 months" ? "button-active" : ""
+                  }`}
+              >
+                  12 months
+              </button>
+
+              <button
+                  onClick={() => setTimeRange("6 months")}
+                  className={`button-default ${
+                      timeRange === "6 months" ? "button-active" : ""
+                  }`}
+              >
+                  6 months
+              </button>
+              <button
+                  onClick={() => setTimeRange("30 days")}
+                  className={`button-default ${
+                      timeRange === "30 days" ? "button-active" : ""
+                  }`}
+              >
+                  30 days
+              </button>
+              <button
+                  onClick={() => setTimeRange("7 days")}
+                  className={`button-default ${
+                      timeRange === "7 days" ? "button-active" : ""
+                  }`}
+              >
+                  7 days
+              </button>
+          </div>
+          <div style={{height: "300px"}}>
+              <MyResponsiveLine data={getData()}/>
+          </div>
       </div>
     </div>
   );

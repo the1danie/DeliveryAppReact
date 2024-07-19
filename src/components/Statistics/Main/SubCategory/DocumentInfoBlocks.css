@@ -3,7 +3,7 @@
   grid-template-columns: repeat(2, 1fr); /* Create two equal columns */
   margin-top: 10px;
   gap: 20px; /* Space between the blocks */
-  width: 50.4%; /* Container width */
+  width: 52%; /* Container width */
   margin-left: 17.4%; /* Container alignment */
 }
 

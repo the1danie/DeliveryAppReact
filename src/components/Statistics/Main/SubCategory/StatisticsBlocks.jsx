@@ -10,7 +10,7 @@ const StatisticsBlocks = ({ totalUsers, totalPaidSubscriptions }) => {
         gridTemplateColumns: "repeat(2, 1fr)", // Create two equal columns
         marginTop: "10px",
         gap: "20px", // Space between the blocks
-        width: "50.4%", // Container width
+        width: "52%", // Container width
         marginLeft: "17.4%", // Container alignment
       }}
     >
