@@ -5,7 +5,7 @@ const TopUsersStatistics = ({ onFilterChange }) => {
   const [activeItem, setActiveItem] = useState("Пользователь"); // State to track active item
 
   const handleClick = (item) => {
-    setActiveItem(item); // Update active item on click
+    setActiveItem(item); // Update active item
     onFilterChange(item); // Notify parent component of the filter change
   };
 
