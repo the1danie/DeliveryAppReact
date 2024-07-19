@@ -87,13 +87,25 @@ const App = () => {
     }
   };
 
+  // Функция для вычисления общего количества пользователей
+  const getTotalUsers = () => {
+    const data = getData();
+    return data.reduce((total, dataset) => {
+      return total + dataset.data.reduce((sum, point) => sum + point.y, 0);
+    }, 0);
+  };
+
+  // Функция для вычисления общего количества платных подписок (пример, можно адаптировать под реальные данные)
+  const getTotalPaidSubscriptions = () => {
+    return 1234; // Примерное значение, замените реальным вычислением
+  };
+
   return (
     <div
       style={{
         display: "flex",
         justifyContent: "flex-start",
         padding: "10px",
-        marginLeft: "330px",
       }}
     >
       <div
@@ -101,11 +113,19 @@ const App = () => {
           padding: "10px",
           borderRadius: "10px",
           border: "1px solid #ddd",
-          maxWidth: "800px",
-          width: "90%", // Adjust the width as needed
+          maxWidth: "1000px",
+          width: "90%",
+          marginLeft: "17%", // Adjust the width as needed
         }}
       >
-        <h2>Пользователи</h2>
+        <h2
+          style={{
+            marginTop: "5px",
+            marginLeft: "10px",
+          }}
+        >
+          Пользователи
+        </h2>
         <div
           style={{
             display: "flex",
@@ -167,7 +187,7 @@ const App = () => {
             7 дней
           </button>
         </div>
-        <div style={{ height: "200px" }}>
+        <div style={{ height: "300px" }}>
           <MyResponsiveLine data={getData()} />
         </div>
       </div>
