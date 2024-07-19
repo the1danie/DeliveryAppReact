@@ -1,5 +1,5 @@
 import ProgressBar from "progressbar.js";
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from "react";
 
 const ProgressBarLine = () => {
   const containerRef = useRef(null);
@@ -12,7 +12,7 @@ const ProgressBarLine = () => {
         duration: 1400,
         color: "#FFEA82",
         trailColor: "#eee",
-        trailWidth: 1,
+        trailWidth: 0,
         svgStyle: { width: "100%", height: "100%" },
         from: { color: "#FFEA82" },
         to: { color: "#ED6A5A" },
@@ -21,14 +21,18 @@ const ProgressBarLine = () => {
         },
       });
 
-      bar.animate(1.0); // Number from 0.0 to 1.0
+      bar.animate(1.0);
+
+      return () => {
+        bar.destroy(); // Clean up the progress bar when the component unmounts
+      };
     }
   }, []);
 
   return (
     <div
       ref={containerRef}
-      style={{ margin: "20px", width: "400px", height: "8px" }}
+      style={{ margin: "20px", width: "940px", height: "8px" }}
     />
   );
 };
