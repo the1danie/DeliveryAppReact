@@ -37,8 +37,7 @@
     "react-intl": "^6.6.8",
     "react-router-dom": "^6.25.0",
     "react-spring": "^9.7.3",
-    "react-tailwindcss-datepicker": "^1.6.6",
-    "rsuite": "^5.67.0"
+    "react-tailwindcss-datepicker": "^1.6.6"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",

@@ -1,15 +1,34 @@
-import React, {useState} from 'react';
-import './TopFinanceToogle.css'
-import Period from "../../../assets/ButtonPeriod.svg";
-import Admin from "../../../assets/Admin.svg";
+import React, { useState } from 'react';
+import './TopFinanceToogle.css';
+import MyDateRangePicker from "./MyDateRangePicker";
+import ButtonPeriod from '../../../assets/ButtonPeriod.svg'
 
 const TopFinanceToogle = ({ onFilterChange }) => {
     const [activeItem, setActiveItem] = useState("Статистика"); // State to track active item
+    const [showDatePicker, setShowDatePicker] = useState(false); // State to toggle date picker
 
+    // Handle item click
     const handleClick = (item) => {
         setActiveItem(item); // Update active item
         onFilterChange(item); // Notify parent component of the filter change
+        console.log(`Active item set to: ${item}`);
     };
+
+    // Toggle date picker visibility
+    const toggleDatePicker = () => {
+        setShowDatePicker(prev => {
+            const newState = !prev;
+            console.log(`DatePicker visibility changed to: ${newState}`);
+            return newState;
+        });
+    };
+
+    // Close date picker handler
+    const handleDatePickerClose = () => {
+        setShowDatePicker(false);
+        console.log('Date picker closed');
+    };
+
     return (
         <div className="users_platform users_platform_custom">
             <div className="users">
@@ -26,13 +45,16 @@ const TopFinanceToogle = ({ onFilterChange }) => {
                     Тарифные планы
                 </p>
             </div>
-            <button className='top-navbar-button'>
-                <a href="#" className="header-link">
 
-                </a>
-            </button>
+            <button onClick={toggleDatePicker}><img src={ButtonPeriod} alt=""/></button>
+
+            {showDatePicker && (
+                <div className="overlay">
+                    <MyDateRangePicker onClose={handleDatePickerClose} />
+                </div>
+            )}
         </div>
-);
+    );
 };
 
 export default TopFinanceToogle;
