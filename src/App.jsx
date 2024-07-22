@@ -7,6 +7,7 @@ import AllUsers from "./components/Users/AllUsers/AllUsers.jsx";
 import UserCard from "./components/Users/UserCard/UserCard.jsx";
 import Modal from "./components/Users/UserCard/BlockUser/Modal.jsx";
 import Statistics from "./components/Statistics/Main/Statistics.jsx";
+import Finance from "./components/Finance/Finance.jsx";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
                 <Route path="/users/edit" element={<UserCard />} />
                 <Route path="/users/edit/block" element={<Modal />} />
                 <Route path="/statistics" element={<Statistics />} />
+                <Route path="/finances" element={<Finance />} />
             </Routes>
         </Router>
     );

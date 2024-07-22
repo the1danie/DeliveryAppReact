@@ -1,0 +1,7 @@
+.users_platform_custom {
+    display: flex;
+    align-items: baseline;
+    max-width: 1100px; /* Set the maximum width as needed */
+    justify-content: space-between;
+    margin-left: 7%;
+}
