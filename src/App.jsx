@@ -8,7 +8,7 @@ import UserCard from "./components/Users/UserCard/UserCard.jsx";
 import Modal from "./components/Users/UserCard/BlockUser/Modal.jsx";
 import Statistics from "./components/Statistics/Main/Statistics.jsx";
 import Finance from "./components/Finance/Finance.jsx";
-
+import Tracker from "./components/Tracker/Tracker";
 
 function App() {
     return (
@@ -22,6 +22,7 @@ function App() {
                 <Route path="/users/edit/block" element={<Modal />} />
                 <Route path="/statistics" element={<Statistics />} />
                 <Route path="/finances" element={<Finance />} />
+                <Route path="/tracker" element={<Tracker />} />
             </Routes>
         </Router>
     );

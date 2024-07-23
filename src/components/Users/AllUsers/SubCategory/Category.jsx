@@ -102,9 +102,11 @@ const Category = ({ filter }) => {
                   </span>
                 </td>
                 <td className="img-container">
-                  <img src={user.avatar} alt="Profile" />
-                  <div className="img-text">
-                    <span>{user.name}</span>
+                  <div style={{ display: "flex"}}>
+                    <img src={user.avatar} alt="Profile"/>
+                    <div className="img-text">
+                      <span>{user.name}</span>
+                    </div>
                   </div>
                 </td>
                 <td className="ambassador">{user.status}</td>

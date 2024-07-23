@@ -6,6 +6,11 @@
     padding: 20px; /* Add padding for spacing */
 }
 
+.table > :not(caption) > * > * {
+    padding: .7rem .5rem; /* Внутренние отступы для ячеек таблицы */
+}
+
+
 .content-category {
     display: flex;
     justify-content: space-between; /* Space items evenly */
@@ -75,10 +80,18 @@ table {
     display: inline-block; /* Установлено inline-block для уменьшенного фона */
 }
 
-.img-container {
-    display: flex;
-    align-items: center;
+.rect-red {
+    margin-top: 5px;
+    white-space: nowrap; /* Prevent text wrapping */
+    background-color: rgb(255, 239, 238); /* Светло-зелёный фон */
+    color: #ef4545; /* Зелёный текст */
+    padding: 2px 10px; /* Уменьшенные внутренние отступы */
+    border-radius: 5px; /* Закруглённые углы */
+    text-align: center;
+    display: inline-block; /* Установлено inline-block для уменьшенного фона */
 }
+
+
 
 .img-container img {
     max-width: 50px; /* Maximum width for the image */
@@ -98,5 +111,5 @@ table {
 }
 
 .data, .ambassador, .gmail-table, .pen-table {
-    padding-top: 15px   !important;
+    padding-top: 19px   !important;
 }
