@@ -9,6 +9,7 @@ import Modal from "./components/Users/UserCard/BlockUser/Modal.jsx";
 import Statistics from "./components/Statistics/Main/Statistics.jsx";
 import Finance from "./components/Finance/Finance.jsx";
 import Tracker from "./components/Tracker/Tracker";
+import TrackerOrderPage from "./components/Tracker/OrderPage/TrackerOrderPage";
 
 function App() {
     return (
@@ -23,6 +24,8 @@ function App() {
                 <Route path="/statistics" element={<Statistics />} />
                 <Route path="/finances" element={<Finance />} />
                 <Route path="/tracker" element={<Tracker />} />
+                <Route path="/tracker/order" element={<TrackerOrderPage />} />
+
             </Routes>
         </Router>
     );
