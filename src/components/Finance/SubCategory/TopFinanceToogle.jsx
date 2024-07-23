@@ -46,12 +46,16 @@ const TopFinanceToogle = ({ onFilterChange }) => {
                 </p>
             </div>
 
-            <button onClick={toggleDatePicker}><img src={ButtonPeriod} alt=""/></button>
 
-            {showDatePicker && (
-                <div className="overlay">
-                    <MyDateRangePicker onClose={handleDatePickerClose} />
-                </div>
+            {activeItem === "Статистика" && (
+                <>
+                    <button onClick={toggleDatePicker}><img src={ButtonPeriod} alt=""/></button>
+                    {showDatePicker && (
+                        <div className="overlay">
+                            <MyDateRangePicker onClose={handleDatePickerClose} />
+                        </div>
+                    )}
+                </>
             )}
         </div>
     );
