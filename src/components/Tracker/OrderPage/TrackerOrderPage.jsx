@@ -4,6 +4,7 @@ import LeftNavbar from "../../Users/AllUsers/SubCategory/LeftNavbar";
 import TopNavbar from "../../Users/AllUsers/SubCategory/TopNavbar";
 import OrderInformation from "./SubCategory/OrderInformation";
 import InformationOrderBlock from "./SubCategory/InformationOrderBlock";
+import TrackerComments from "./SubCategory/TrackerComments";
 
 const TrackerOrderPage = () => {
     return (
@@ -12,6 +13,7 @@ const TrackerOrderPage = () => {
             <TopNavbar />
             <OrderInformation/>
             <InformationOrderBlock/>
+            <TrackerComments/>
         </div>
     );
 };
