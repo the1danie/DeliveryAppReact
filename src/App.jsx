@@ -10,6 +10,7 @@ import Statistics from "./components/Statistics/Main/Statistics.jsx";
 import Finance from "./components/Finance/Finance.jsx";
 import Tracker from "./components/Tracker/Tracker";
 import TrackerOrderPage from "./components/Tracker/OrderPage/TrackerOrderPage";
+import SettingsPage from "./components/SettingsPage/SettingsPage";
 
 function App() {
     return (
@@ -25,7 +26,7 @@ function App() {
                 <Route path="/finances" element={<Finance />} />
                 <Route path="/tracker" element={<Tracker />} />
                 <Route path="/tracker/order" element={<TrackerOrderPage />} />
-
+                <Route path="/settings" element={<SettingsPage/>} />
             </Routes>
         </Router>
     );
