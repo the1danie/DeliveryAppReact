@@ -21,6 +21,7 @@
     "@nivo/line": "^0.87.0",
     "@syncfusion/ej2-react-calendars": "^26.1.41",
     "@tailwindcss/forms": "^0.5.7",
+    "axios": "^1.7.2",
     "chart.js": "^4.4.3",
     "chartjs-plugin-annotation": "^3.0.1",
     "classnames": "^2.5.1",
