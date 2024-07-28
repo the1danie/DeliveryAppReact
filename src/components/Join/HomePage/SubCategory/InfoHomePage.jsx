@@ -42,7 +42,7 @@ const InfoHomePage = () => {
             localStorage.setItem('refreshToken', refresh_token);
 
             // Redirect to another page
-            navigate('/join/confirmation');
+            navigate('/join/confirmation', { state: { username } });
         } catch (error) {
             setError(error.message || 'Login failed');
         }
@@ -81,7 +81,7 @@ const InfoHomePage = () => {
                             className='password-icon'
                         />
                     </div>
-                    {error && <p className='error-message'>{error}</p>}
+                    {error && <p className='error-message' style={{margin: '0'}}>{error}</p>}
                     <button className='submit' type="submit">Войти</button>
                 </form>
             </div>

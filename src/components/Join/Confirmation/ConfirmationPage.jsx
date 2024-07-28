@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import NavbarHomePage from '../HomePage/SubCategory/NavbarHomePage.jsx';
 import boy from '../../../assets/RunBoy.svg';
 import './ConfirmationPage.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretLeft } from '@fortawesome/free-solid-svg-icons';
-import { useNavigate } from 'react-router-dom';
 
 const ConfirmationPage = () => {
     const [code, setCode] = useState('');
-    const loginExample = 'bombuuk@gmail.com';
     const navigate = useNavigate();
+    const location = useLocation();
+    const loginExample = location.state?.username || 'bombuuk@gmail.com'; // Get username from state or use default
 
     const handleCodeChange = (e) => {
         setCode(e.target.value);
@@ -19,7 +20,7 @@ const ConfirmationPage = () => {
         e.preventDefault();
 
         // Replace with actual authentication logic
-        if (code === '666666') { // Changed to string comparison for code
+        if (code === '666666') {
             navigate('/join/generatepswd'); // Navigate to '/join/generatepswd' upon successful authentication
         } else {
             alert('Неверный код подтверждения');
