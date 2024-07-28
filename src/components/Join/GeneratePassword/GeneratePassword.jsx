@@ -3,13 +3,19 @@ import NavbarHomePage from '../HomePage/SubCategory/NavbarHomePage.jsx';
 import boy from '../../../assets/RunBoy.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { register } from '../../../../axiosStore';
+import './GeneratePassword.css'; // Assuming you have a CSS file for styling
 
 const GeneratePassword = () => {
     const [firstPswd, setFirstPswd] = useState('');
     const [secondPswd, setSecondPswd] = useState('');
     const [passwordVisible, setPasswordVisible] = useState(false);
+    const [error, setError] = useState('');
     const navigate = useNavigate();
+    const location = useLocation();
+    const login = location.state.username; // Using optional chaining to prevent null error
+    const code = location.state.code; // Using optional chaining to prevent null error
 
     const handleFirstPswdChange = (e) => {
         setFirstPswd(e.target.value);
@@ -23,16 +29,19 @@ const GeneratePassword = () => {
         setPasswordVisible(!passwordVisible);
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
-        // Replace with actual authentication logic
         if (firstPswd === secondPswd) {
-            // Simulate password change success
-            console.log(`Password changed: ${firstPswd}`);
-            navigate('/users'); // Navigate to '/users' upon successful password change
+            try {
+                await register(login, code, firstPswd);
+                navigate('/users'); // Navigate to '/users' upon successful password change
+            } catch (err) {
+                console.error(err); // Log the error for debugging
+                setError(err.message || 'Failed to register new password.');
+            }
         } else {
-            alert('Неправильные пароли');
+            setError('Пароли не совпадают');
         }
 
         // Reset fields after submission
@@ -58,6 +67,7 @@ const GeneratePassword = () => {
                                 value={firstPswd}
                                 onChange={handleFirstPswdChange}
                                 name='password'
+                                required
                             />
                             <FontAwesomeIcon
                                 icon={passwordVisible ? faEye : faEyeSlash}
@@ -72,6 +82,7 @@ const GeneratePassword = () => {
                                 value={secondPswd}
                                 onChange={handleSecondPswdChange}
                                 name='password'
+                                required
                             />
                             <FontAwesomeIcon
                                 icon={passwordVisible ? faEye : faEyeSlash}
@@ -79,6 +90,7 @@ const GeneratePassword = () => {
                                 className='password-icon'
                             />
                         </div>
+                        {error && <p className='error-message'>{error}</p>}
                         <button className='submit' type='submit'>
                             Сохранить
                         </button>

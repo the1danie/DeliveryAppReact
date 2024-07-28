@@ -53,5 +53,14 @@ export const verifyCode = async (email, code) => {
     }
 };
 
+export const register = async (email, code, new_password) => {
+    try {
+        const response = await instance.post('/resetpassword', { email, code, new_password});
+        return response.data;
+    } catch (error) {
+        throw new Error(error.response?.data?.message || 'Failed to verify code.');
+    }
+};
+
 
 export default instance;

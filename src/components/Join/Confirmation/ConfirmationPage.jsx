@@ -43,7 +43,7 @@ const ConfirmationPage = () => {
             console.log(response.message); // Handle success message if needed
 
             // Navigate to another page on successful verification
-            navigate('/join/generatepswd');
+            navigate('/join/generatepswd', { state: { username: login, code } });
         } catch (err) {
             console.error(err); // Log the error for debugging
             setError(err.message || 'Failed to verify confirmation code.');
