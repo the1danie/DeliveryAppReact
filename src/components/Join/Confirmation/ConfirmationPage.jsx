@@ -1,29 +1,52 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import NavbarHomePage from '../HomePage/SubCategory/NavbarHomePage.jsx';
 import boy from '../../../assets/RunBoy.svg';
 import './ConfirmationPage.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretLeft } from '@fortawesome/free-solid-svg-icons';
+import { sendCode, verifyCode } from '../../../../axiosStore';
 
 const ConfirmationPage = () => {
     const [code, setCode] = useState('');
+    const [error, setError] = useState('');
+    const [codeSent, setCodeSent] = useState(false);
+
     const navigate = useNavigate();
     const location = useLocation();
-    const loginExample = location.state?.username || 'bombuuk@gmail.com'; // Get username from state or use default
+    const login = location.state.username;
+
+    useEffect(() => {
+        const sendVerificationCode = async () => {
+            try {
+                const response = await sendCode(login);
+                setCodeSent(true);
+            } catch (err) {
+                setError(err.message || 'Failed to send confirmation code.');
+            }
+        };
+
+        if (!codeSent) {
+            sendVerificationCode();
+        }
+    }, [login, codeSent]);
 
     const handleCodeChange = (e) => {
         setCode(e.target.value);
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
-        // Replace with actual authentication logic
-        if (code === '666666') {
-            navigate('/join/generatepswd'); // Navigate to '/join/generatepswd' upon successful authentication
-        } else {
-            alert('Неверный код подтверждения');
+        try {
+            const response = await verifyCode(login, code); // Pass email and code as separate arguments
+            console.log(response.message); // Handle success message if needed
+
+            // Navigate to another page on successful verification
+            navigate('/join/generatepswd');
+        } catch (err) {
+            console.error(err); // Log the error for debugging
+            setError(err.message || 'Failed to verify confirmation code.');
         }
 
         // Reset fields after submission
@@ -46,7 +69,8 @@ const ConfirmationPage = () => {
                         <h5>Код подтверждения</h5>
                     </div>
                     <div className='confirmation-page-text'>
-                        <p>Вам отправлен код для сброса пароля на почту <br />{loginExample}</p>
+                        <p>Вам отправлен код для сброса пароля на почту <br />{login}</p>
+                        {error && <p className='error-message'>{error}</p>}
                     </div>
                     <div className='confirmation-authentication'>
                         <form onSubmit={handleSubmit}>

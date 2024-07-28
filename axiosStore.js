@@ -35,4 +35,23 @@ export const loginUser = async (username, password) => {
     }
 };
 
+export const sendCode = async (email) => {
+    try {
+        const response = await instance.post('/resetpassword/sendcode', { email });
+        return response.data;
+    } catch (error) {
+        throw new Error(error.response?.data?.message || 'Failed to send code.');
+    }
+};
+
+export const verifyCode = async (email, code) => {
+    try {
+        const response = await instance.post('/resetpassword/verifycode', { email, code });
+        return response.data;
+    } catch (error) {
+        throw new Error(error.response?.data?.message || 'Failed to verify code.');
+    }
+};
+
+
 export default instance;
