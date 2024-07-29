@@ -31,6 +31,13 @@ const ConfirmationPage = () => {
         }
     }, [login, codeSent]);
 
+    useEffect(() => {
+        const accessToken = localStorage.getItem('accessToken');
+        const refreshToken = localStorage.getItem('refreshToken');
+        console.log('Access Token:', accessToken);
+        console.log('Refresh Token:', refreshToken);
+    }, []);
+
     const handleCodeChange = (e) => {
         setCode(e.target.value);
     };

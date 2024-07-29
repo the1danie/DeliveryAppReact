@@ -62,5 +62,23 @@ export const register = async (email, code, new_password) => {
     }
 };
 
+export const role = async (email, user_type, accessToken, refreshToken) => {
+    try {
+        const response = await instance.post('/role/type',
+            { email, user_type },
+            {
+                headers: {
+                    'Authorization': `Bearer ${accessToken}`,
+                }
+            }
+        );
+        return response.data;
+    } catch (error) {
+        throw new Error(error.response?.data?.message || 'Failed to verify code.');
+    }
+};
+
+
+
 
 export default instance;
