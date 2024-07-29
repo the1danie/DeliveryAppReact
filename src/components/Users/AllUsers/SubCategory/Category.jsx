@@ -8,45 +8,7 @@ import Trash from "../../../../assets/Trash.svg";
 import { role } from "../../../../../axiosStore"; // Import the role function
 
 const Category = ({ filter }) => {
-  const [users, setUsers] = useState([
-    {
-      date: "01.01.2024",
-      role: "Пользователь",
-      role_number: 1,
-      name: "Иван Иванов",
-      status: "Амбассадор",
-      email: "bombaa@gmail.com",
-      avatar: AvatarFirst,
-    },
-    {
-      date: "01.01.2024",
-      role: "Курьер",
-      role_number: 2,
-      name: "Ирина Иванова",
-      status: "Амбассадор",
-      email: "guest@guest.com",
-      avatar: AvatarSecond,
-    },
-    {
-      date: "01.01.2024",
-      role: "Пользователь",
-      role_number: 2,
-      name: "Иван Иванов",
-      status: "",
-      email: "admin1@gmail.com",
-      avatar: AvatarFirst,
-    },
-    {
-      date: "01.01.2024",
-      role: "Курьер",
-      role_number: 3,
-      name: "Ирина Иванова",
-      status: "",
-      email: "admin1@admin.com",
-      avatar: AvatarSecond,
-    },
-  ]);
-
+  const [users, setUsers] = useState([]);
   const [tokens, setTokens] = useState({ accessToken: '', refreshToken: '' });
 
   useEffect(() => {
@@ -54,6 +16,17 @@ const Category = ({ filter }) => {
     const refreshToken = localStorage.getItem('refreshToken');
     setTokens({ accessToken, refreshToken });
   }, []);
+
+  useEffect(() => {
+    const storedUsers = localStorage.getItem('users');
+    if (storedUsers) {
+      // If users are already stored in localStorage, use them
+      setUsers(JSON.parse(storedUsers));
+    } else {
+      // If no stored users, fetch from API
+      fetchUserRoles();
+    }
+  }, [tokens]);
 
   const roleMapping = {
     "Courier": "Курьер",
@@ -63,7 +36,45 @@ const Category = ({ filter }) => {
   };
 
   const fetchUserRoles = async () => {
-    let updatedUsers = [...users];
+    let updatedUsers = [
+      {
+        date: "01.01.2024",
+        role: "",
+        role_number: 1,
+        name: "Иван Иванов",
+        status: "Амбассадор",
+        email: "bombaa@gmail.com",
+        avatar: AvatarFirst,
+      },
+      {
+        date: "01.01.2024",
+        role: "",
+        role_number: 2,
+        name: "Ирина Иванова",
+        status: "Амбассадор",
+        email: "guest@guest.com",
+        avatar: AvatarSecond,
+      },
+      {
+        date: "01.01.2024",
+        role: "",
+        role_number: 2,
+        name: "Иван Иванов",
+        status: "",
+        email: "admin1@gmail.com",
+        avatar: AvatarFirst,
+      },
+      {
+        date: "01.01.2024",
+        role: "",
+        role_number: 3,
+        name: "Ирина Иванова",
+        status: "",
+        email: "admin1@admin.com",
+        avatar: AvatarSecond,
+      },
+    ];
+
     for (let user of updatedUsers) {
       try {
         const response = await role(user.email, user.role_number, tokens.accessToken, tokens.refreshToken);
@@ -74,13 +85,8 @@ const Category = ({ filter }) => {
       }
     }
     setUsers(updatedUsers);
+    localStorage.setItem('users', JSON.stringify(updatedUsers)); // Store users in localStorage
   };
-
-  useEffect(() => {
-    if (tokens.accessToken && tokens.refreshToken) {
-      fetchUserRoles();
-    }
-  }, [tokens]); // Run when tokens are set
 
   const filterUsersByRole = (users, role) => {
     console.log(`Filtering users by role: ${role}`); // Debug log
