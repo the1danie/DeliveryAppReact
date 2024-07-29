@@ -13,8 +13,11 @@ const TopUsers = ({ onFilterChange }) => {
         <div className="users_platform">
             <div className="users">
                 <p className={activeItem === 'Все' ? 'active' : ''} onClick={() => handleClick('Все')}>Все</p>
-                <p className={activeItem === 'Пользователь' ? 'active' : ''} onClick={() => handleClick('Пользователь')}>Пользователи</p>
+                <p className={activeItem === 'Пользователь' ? 'active' : ''}
+                   onClick={() => handleClick('Пользователь')}>Пользователи</p>
                 <p className={activeItem === 'Курьер' ? 'active' : ''} onClick={() => handleClick('Курьер')}>Курьеры</p>
+                <p className={activeItem === 'Админ' ? 'active' : ''} onClick={() => handleClick('Админ')}>Админ</p>
+
             </div>
         </div>
     );

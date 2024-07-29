@@ -11,6 +11,8 @@ const TopInformation = ({ activeItem }) => {
         titleText = 'Пользователи';
     } else if (activeItem === 'Курьер') {
         titleText = 'Курьеры';
+    } else if (activeItem === 'Админ') {
+        titleText = 'Админ';
     }
 
     return (
