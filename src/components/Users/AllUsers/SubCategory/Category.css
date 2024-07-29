@@ -69,6 +69,17 @@ table {
     display: inline-block; /*   Установлено inline-block для уменьшенного фона */
 }
 
+.rect-red {
+    margin-top: 5px;
+    white-space: nowrap; /* Prevent text wrapping */
+    background-color: rgba(239, 49, 49, 0.1); /* Светло-зелёный фон */
+    color: #ef3131; /* Зелёный текст */
+    padding: 2px 10px; /* Уменьшенные внутренние отступы */
+    border-radius: 5px; /* Закруглённые углы */
+    text-align: center;
+    display: inline-block; /*   Установлено inline-block для уменьшенного фона */
+}
+
 .rect-grey {
     margin-top: 5px;
     white-space: nowrap; /* Prevent text wrapping */
