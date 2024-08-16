@@ -3,7 +3,7 @@ import './InformationOrderBlock.css';
 import GreyVector from '../../../../assets/VectorgreyVector.svg';
 import PurpleVector from '../../../../assets/VectorpurpleVector.svg';
 import Line from '../../../../assets/Vector 2189Line.svg'
-import Man from '../../../../assets/man.png';
+import Man from '../../../../assets/Avatar.png';
 import Woman from '../../../../assets/Avatar.png';
 
 const InformationOrderBlock = () => {

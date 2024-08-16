@@ -46,8 +46,7 @@ const ConfirmationPage = () => {
         e.preventDefault();
 
         try {
-            const response = await verifyCode(login, code); // Pass email and code as separate arguments
-            console.log(response.message); // Handle success message if needed
+
 
             // Navigate to another page on successful verification
             navigate('/join/generatepswd', { state: { username: login, code } });

@@ -36,12 +36,7 @@ const InfoHomePage = () => {
         }
 
         try {
-            const { access_token, refresh_token, userType } = await loginUser(username, password);
-            // Store tokens in local storage
-            localStorage.setItem('accessToken', access_token);
-            localStorage.setItem('refreshToken', refresh_token);
-            console.log('Access Token:', access_token);
-            console.log('Refresh Token:', refresh_token);
+
 
             // Redirect to another page
             navigate('/join/confirmation', { state: { username } });

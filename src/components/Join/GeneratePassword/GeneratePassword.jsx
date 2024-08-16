@@ -34,7 +34,7 @@ const GeneratePassword = () => {
 
         if (firstPswd === secondPswd) {
             try {
-                await register(login, code, firstPswd);
+
                 navigate('/users'); // Navigate to '/users' upon successful password change
             } catch (err) {
                 console.error(err); // Log the error for debugging

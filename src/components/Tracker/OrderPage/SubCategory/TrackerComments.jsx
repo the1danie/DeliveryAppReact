@@ -1,5 +1,5 @@
 import React from 'react';
-import Man from '../../../../assets/man.png';
+import Man from '../../../../assets/Avatar.png';
 import Woman from '../../../../assets/Avatar.png';
 import './TrackerComments.css'
 
