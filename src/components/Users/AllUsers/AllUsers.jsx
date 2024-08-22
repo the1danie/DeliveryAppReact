@@ -9,13 +9,13 @@ const AllUsers = () => {
     const [filter, setFilter] = useState('Все'); // State for filtering users
 
     return (
-        <div>
+        <>
             <LeftNavbar/>
             <TopNavbar/>
             <TopInformation activeItem={filter} />
             <TopUsers onFilterChange={setFilter} />
             <Category filter={filter} />
-        </div>
+        </>
     );
 };
 

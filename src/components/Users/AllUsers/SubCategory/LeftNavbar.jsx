@@ -37,6 +37,7 @@ const LeftNavbar = () => {
                 <img
                     src={boy}
                     style={{ width: "40px", height: "40px", marginLeft: "20px" }}
+                    className={'img-little'}
                     alt="First Icon"
                 />
                 <p className="infohome-order">Курьеры</p>

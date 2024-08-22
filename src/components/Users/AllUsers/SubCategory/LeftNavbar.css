@@ -1,5 +1,11 @@
 /* Navbar.css */
 
+.img-little {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-left: 2.5rem;
+}
+
 .navbar {
     display: flex;
     align-content: center;
@@ -8,11 +14,71 @@
     left: 0;
     top: 0;
     height: 100%;
-    width: 260px;
     background-color: #f6f8f9;
-    padding-top: 20px;
+    padding-top: 1.25rem; /* 20px */
     align-items: flex-start;
     z-index: 1;
+    transition: width 0.3s ease; /* Плавный переход для ширины */
+}
+
+@media (max-width: 150rem) { /* 1024px / 16 = 64rem */
+    .navbar {
+        width: 18rem; /* Ширина панели на средних экранах */
+    }
+}
+
+@media (max-width: 120rem) { /* 1024px / 16 = 64rem */
+    .navbar {
+        width: 15rem; /* Ширина панели на средних экранах */
+    }
+}
+
+@media (max-width: 110rem) { /* 1024px / 16 = 64rem */
+    .navbar {
+        width: 12rem; /* Ширина панели на средних экранах */
+    }
+    .infohome-order {
+        font-size: 1.2rem;
+    }
+    .img-little {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+@media (max-width: 105rem) { /* 1024px / 16 = 64rem */
+    .navbar {
+        width: 10rem; /* Ширина панели на средних экранах */
+    }
+}
+
+@media (max-width: 99rem) { /* 1024px / 16 = 64rem */
+    .navbar {
+        width: 8rem; /* Ширина панели на средних экранах */
+    }
+}
+
+@media (max-width: 64rem) { /* 1024px / 16 = 64rem */
+    .navbar {
+        width: 12rem; /* Ширина панели на средних экранах */
+    }
+}
+
+/* Адаптивность для экранов с шириной до 768px (например, мобильные устройства) */
+@media (max-width: 48rem) { /* 768px / 16 = 48rem */
+    .navbar {
+        width: 8rem; /* Ширина панели на мобильных устройствах */
+        position: relative; /* Сменить положение для мобильных устройств */
+    }
+}
+
+/* Адаптивность для экранов с шириной до 576px (например, очень маленькие экраны) */
+@media (max-width: 36rem) { /* 576px / 16 = 36rem */
+    .navbar {
+        width: 100%; /* Панель занимает всю ширину экрана */
+        position: absolute; /* Размещаем панель сверху, если нужно */
+        height: auto; /* Высота панели на мобильных устройствах */
+    }
 }
 
 .navbar .nav-item {
