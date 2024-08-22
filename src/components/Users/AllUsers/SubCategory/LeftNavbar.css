@@ -1,4 +1,7 @@
 /* Navbar.css */
+.ml-2 {
+    font-size: 19px;
+}
 
 .img-little {
     width: 2.5rem;
@@ -50,12 +53,28 @@
     .navbar {
         width: 10rem; /* Ширина панели на средних экранах */
     }
+    .ml-2 {
+        font-size: 15px;
+    }
 }
 
 @media (max-width: 99rem) { /* 1024px / 16 = 64rem */
     .navbar {
         width: 8rem; /* Ширина панели на средних экранах */
     }
+    .ml-2 {
+        font-size: 12px;
+    }
+    .infohome-order {
+        margin: 0;
+        margin-top: 5px;
+        font-size: 14px;
+    }
+    .img-little {
+        width: 2rem;
+        height: 2rem;
+    }
+
 }
 
 @media (max-width: 64rem) { /* 1024px / 16 = 64rem */
